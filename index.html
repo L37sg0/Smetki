@@ -13,28 +13,33 @@
     <center>
         <div class="container">
             <div class="item-a">
-                <h1>Сметки- Вашият личен финансов организатор</h1>
-                <h2>Моля попълнете информация за приходи и разходи:</h2>
+                <h3>Сметки- Вашият личен финансов организатор</h3>
+                <h4>Моля попълнете информация за приходи и разходи:</h4>
             </div>
-            <div class="item-b"id="prihod" >
-                <h2>Приходи:</h2>
-                <ul>
-                    <li><input value="Разход"></li>
-                    <li><input value="0"></li>
-                    <li><a href="#" onclick="newIncome('prihod')">Добави нов</a></li>
-                </ul>
+            <div class="item-b">
+                <h4>Приходи:</h4>
+                <form onsubmit="newIncome('income')">
+                    <input value="Приход" id="incomeName">
+                    <input type="number" value="0" id="incomePrice" min="0" required>
+                    <input type="submit" value="Добави">
+                </form>
+                <table id="income" ></table>
             </div>
             <div class="item-c">
-                <h2>Разходи:</h2>
-                <ul>
-                    <li><input value="Разход"></li>
-                    <li><input value="0"></li>
-                    <li><a href="#" onclick="newBill()">Добави нов</a></li>
-                </ul>
+                <h4>Разходи:</h4>
+                <form onsubmit="newCost('cost')">
+                    <input value="Разход" id="costName">
+                    <input type="number" value="0" id="costPrice" min="0" required>
+                    <input type="submit" value="Добави">
+                </form>
+                <table id="cost" ></table>
             
             </div>
             <div class="item-d">
-                <h2>Резултат:</h2>
+                <br>
+                <form onsubmit="mathBills()"><input type="submit" value="Резултат:"></form>
+                <br>
+                <table id="bills"></table>
             </div>
 
         </div>
