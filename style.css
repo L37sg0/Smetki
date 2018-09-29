@@ -4,6 +4,8 @@ body{
     background-color:whitesmoke;
     color:whitesmoke;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 ul{
@@ -12,13 +14,16 @@ ul{
     padding: 0;
     overflow: hidden;
     background-color: whitesmoke;
-    max-width: 200px;
+    //max-width: 200px;
+    display: inline;
 }
 li{
     float: center;
+    display: inline;
+    height: 20px;
 }
 li a{
-    display: block;
+    //display: block;
     color: dodgerblue;
     text-align: center;
     padding: 16px;
